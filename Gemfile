@@ -50,7 +50,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # make errors better looking
-gem 'better_errors', '~> 2.9', '>= 2.9.1'
+# gem 'better_errors', '~> 2.9', '>= 2.9.1'
 
 # Bulma css
 gem 'bulma-rails', '~> 0.9.4'
@@ -71,9 +71,14 @@ group :development do
   # Guard is a command line tool to easily handle events on file system modifications.
   gem 'guard', '~> 2.18'
   # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
-  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
+
+  # Provides a better error page for Rails and other Rack apps. Includes source code inspection, a live REPL and local/instance variable inspection for all stack frames.
+
+  gem "better_errors"
+  gem "binding_of_caller"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
